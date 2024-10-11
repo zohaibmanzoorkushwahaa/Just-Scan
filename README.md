@@ -1,4 +1,4 @@
-__ScanCard
+ScanCard
 
 ScanCard is an iOS application built in Swift for detecting cards using the camera preview. It employs two techniques: Rectangle Detection with CIRectangleDetector and Document Detection with Vision Kit.
 
@@ -27,5 +27,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Acknowledgments
 Apple Developer Documentation for Core Image and Vision Kit.
 Open-source community for inspiration.
-Contact
-For inquiries, reach out at [your-email@example.com].
+
