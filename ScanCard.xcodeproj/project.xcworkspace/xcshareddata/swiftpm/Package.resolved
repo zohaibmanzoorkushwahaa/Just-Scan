@@ -1,6 +1,24 @@
 {
-  "originHash" : "fcf8c79fe7093ceb9a9dfb0b83862268d4066402d43bad49476c4a627d4e54ac",
+  "originHash" : "523f5f40cae0053529c7a14fac953acc6169c12cda90295eeee79debb509ac4d",
   "pins" : [
+    {
+      "identity" : "scanbot-document-scanner-sdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/doo/scanbot-document-scanner-sdk-ios-spm.git",
+      "state" : {
+        "revision" : "88245a6203c429d4ffda64b050f32cf8793f1352",
+        "version" : "5.2.2"
+      }
+    },
+    {
+      "identity" : "scanbot-sdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/doo/scanbot-sdk-ios-spm.git",
+      "state" : {
+        "revision" : "263c39e311839fd7211c22a642a69be629b6f2bc",
+        "version" : "5.2.2"
+      }
+    },
     {
       "identity" : "wescan",
       "kind" : "remoteSourceControl",

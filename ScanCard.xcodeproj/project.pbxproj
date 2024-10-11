@@ -6,12 +6,42 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		84C04BAA2CB9461B0083985E /* Copy Bundles */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 84C04BAB2CB9461B0083985E /* Build configuration list for PBXAggregateTarget "Copy Bundles" */;
+			buildPhases = (
+				84C04BAE2CB946450083985E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Copy Bundles";
+			packageProductDependencies = (
+			);
+			productName = "Copy Bundles";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		84C04B902CB80D3C0083985E /* WeScan in Frameworks */ = {isa = PBXBuildFile; productRef = 84C04B8F2CB80D3C0083985E /* WeScan */; };
+		84C04BA92CB945330083985E /* ScanbotSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84C04BA82CB945330083985E /* ScanbotSDK */; };
+		84C04BB22CB947980083985E /* ScanbotSDKOCRData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84C04BB12CB947980083985E /* ScanbotSDKOCRData.bundle */; };
+		84C04BB52CB947E60083985E /* ScanbotDocumentScannerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84C04BB42CB947E60083985E /* ScanbotDocumentScannerSDK */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84C04BAF2CB946950083985E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C04B6E2CB80C930083985E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C04BAA2CB9461B0083985E;
+			remoteInfo = "Copy Bundles";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		84C04B762CB80C930083985E /* ScanCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C04BB12CB947980083985E /* ScanbotSDKOCRData.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ScanbotSDKOCRData.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -40,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C04BA92CB945330083985E /* ScanbotSDK in Frameworks */,
+				84C04BB52CB947E60083985E /* ScanbotDocumentScannerSDK in Frameworks */,
 				84C04B902CB80D3C0083985E /* WeScan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +82,7 @@
 		84C04B6D2CB80C930083985E = {
 			isa = PBXGroup;
 			children = (
+				84C04BB12CB947980083985E /* ScanbotSDKOCRData.bundle */,
 				84C04B782CB80C930083985E /* ScanCard */,
 				84C04B772CB80C930083985E /* Products */,
 			);
@@ -77,6 +110,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84C04BB02CB946950083985E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				84C04B782CB80C930083985E /* ScanCard */,
@@ -84,6 +118,8 @@
 			name = ScanCard;
 			packageProductDependencies = (
 				84C04B8F2CB80D3C0083985E /* WeScan */,
+				84C04BA82CB945330083985E /* ScanbotSDK */,
+				84C04BB42CB947E60083985E /* ScanbotDocumentScannerSDK */,
 			);
 			productName = ScanCard;
 			productReference = 84C04B762CB80C930083985E /* ScanCard.app */;
@@ -102,6 +138,9 @@
 					84C04B752CB80C930083985E = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					84C04BAA2CB9461B0083985E = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = 84C04B712CB80C930083985E /* Build configuration list for PBXProject "ScanCard" */;
@@ -115,6 +154,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				84C04B8E2CB80D3C0083985E /* XCRemoteSwiftPackageReference "WeScan" */,
+				84C04BA72CB945330083985E /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */,
+				84C04BB32CB947E60083985E /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84C04B772CB80C930083985E /* Products */;
@@ -122,6 +163,7 @@
 			projectRoot = "";
 			targets = (
 				84C04B752CB80C930083985E /* ScanCard */,
+				84C04BAA2CB9461B0083985E /* Copy Bundles */,
 			);
 		};
 /* End PBXProject section */
@@ -131,10 +173,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C04BB22CB947980083985E /* ScanbotSDKOCRData.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84C04BAE2CB946450083985E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -af \"${BUILD_DIR%Build/*}/SourcePackages/checkouts/scanbot-sdk-ios-spm/Sources/AdditionalData/ScanbotSDKOCRData.bundle\" \"${PROJECT_DIR}/\"\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84C04B722CB80C930083985E /* Sources */ = {
@@ -145,6 +208,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84C04BB02CB946950083985E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C04BAA2CB9461B0083985E /* Copy Bundles */;
+			targetProxy = 84C04BAF2CB946950083985E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		84C04B8A2CB80C950083985E /* Debug */ = {
@@ -242,7 +313,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -305,7 +376,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -321,6 +392,24 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84C04BAC2CB9461B0083985E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8XS8CDH7L;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84C04BAD2CB9461B0083985E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8XS8CDH7L;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -345,6 +434,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		84C04BAB2CB9461B0083985E /* Build configuration list for PBXAggregateTarget "Copy Bundles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C04BAC2CB9461B0083985E /* Debug */,
+				84C04BAD2CB9461B0083985E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -356,6 +454,22 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		84C04BA72CB945330083985E /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doo/scanbot-sdk-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+		84C04BB32CB947E60083985E /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doo/scanbot-document-scanner-sdk-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -363,6 +477,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84C04B8E2CB80D3C0083985E /* XCRemoteSwiftPackageReference "WeScan" */;
 			productName = WeScan;
+		};
+		84C04BA82CB945330083985E /* ScanbotSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C04BA72CB945330083985E /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */;
+			productName = ScanbotSDK;
+		};
+		84C04BB42CB947E60083985E /* ScanbotDocumentScannerSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C04BB32CB947E60083985E /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */;
+			productName = ScanbotDocumentScannerSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

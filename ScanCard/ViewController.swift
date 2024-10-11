@@ -14,26 +14,19 @@ class ViewController: UIViewController {
     @IBAction func didScanTapped(_ sender: UIButton) {
         let scannerViewController = ImageScannerController(delegate: self)
         scannerViewController.modalPresentationStyle = .fullScreen
-        
         scannerViewController.navigationBar.tintColor = .label
-        
-//        scannerViewController.navigationBar.tintColor = .black
-        
-
         present(scannerViewController, animated: true)
     }
+    
     @IBAction func didScanWithAppleVision(_ sender: Any) {
         let scannerViewController = VNDocumentCameraViewController()
-
         scannerViewController.delegate = self
         present(scannerViewController, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
 
 }
 

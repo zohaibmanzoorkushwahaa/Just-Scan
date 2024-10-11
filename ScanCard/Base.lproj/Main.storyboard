@@ -33,46 +33,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-kZ-f5J">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-kZ-f5J">
                                 <rect key="frame" x="20" y="351" width="353" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eua-Cr-W01">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0k-nj-6KT">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="62.666666666666664"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Scan with Package">
-                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didScanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiF-Gc-Tch"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aft-so-YmI">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eua-Cr-W01">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="62.666666666666664"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Rectange Detection">
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didScanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SiF-Gc-Tch"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Eua-Cr-W01" firstAttribute="leading" secondItem="T0k-nj-6KT" secondAttribute="leading" id="ACd-2F-8AH"/>
+                                            <constraint firstAttribute="height" constant="62.670000000000002" id="Pml-Cm-sjo"/>
+                                            <constraint firstAttribute="bottom" secondItem="Eua-Cr-W01" secondAttribute="bottom" id="e0F-tL-83n"/>
+                                            <constraint firstItem="Eua-Cr-W01" firstAttribute="top" secondItem="T0k-nj-6KT" secondAttribute="top" id="qJl-Wc-X4J"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eua-Cr-W01" secondAttribute="trailing" id="szR-NQ-9F2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-qo-Q1q">
                                         <rect key="frame" x="0.0" y="87.666666666666686" width="353" height="62.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Scan with Apple Vision">
-                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didScanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxU-75-Duc"/>
-                                            <action selector="didScanWithAppleVision:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTC-ny-Rlk"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aft-so-YmI">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="62.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Document Dection">
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didScanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxU-75-Duc"/>
+                                                    <action selector="didScanWithAppleVision:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTC-ny-Rlk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Aft-so-YmI" secondAttribute="trailing" id="AEh-BL-dhB"/>
+                                            <constraint firstItem="Aft-so-YmI" firstAttribute="leading" secondItem="cdb-qo-Q1q" secondAttribute="leading" id="EbH-3d-3F5"/>
+                                            <constraint firstItem="Aft-so-YmI" firstAttribute="top" secondItem="cdb-qo-Q1q" secondAttribute="top" id="KF8-iN-DBZ"/>
+                                            <constraint firstAttribute="height" constant="62.329999999999998" id="QmV-Cx-Meq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Aft-so-YmI" secondAttribute="bottom" id="e0I-PU-2BP"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Cqk-bp-DZK"/>
-                                </constraints>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Card Options." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zi9-mm-0G9">
+                                <rect key="frame" x="20" y="290.33333333333331" width="353" height="30.666666666666686"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
+                            <constraint firstItem="lNM-kZ-f5J" firstAttribute="top" secondItem="zi9-mm-0G9" secondAttribute="bottom" constant="30" id="7SZ-Ov-Gvt"/>
                             <constraint firstItem="lNM-kZ-f5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KOR-Sm-IbJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNM-kZ-f5J" secondAttribute="trailing" constant="20" id="L3D-6v-jNK"/>
                             <constraint firstItem="lNM-kZ-f5J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U72-VP-Def"/>
+                            <constraint firstItem="zi9-mm-0G9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZGQ-jR-GEZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zi9-mm-0G9" secondAttribute="trailing" constant="20" id="boE-lC-tio"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YIs-Ar-XU9"/>
@@ -114,6 +147,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
