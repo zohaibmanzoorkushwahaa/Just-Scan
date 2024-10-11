@@ -7,6 +7,7 @@
 
 import UIKit
 import WeScan
+import VisionKit
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,12 @@ class ViewController: UIViewController {
 //        scannerViewController.navigationBar.tintColor = .black
         
 
+        present(scannerViewController, animated: true)
+    }
+    @IBAction func didScanWithAppleVision(_ sender: Any) {
+        let scannerViewController = VNDocumentCameraViewController()
+
+        scannerViewController.delegate = self
         present(scannerViewController, animated: true)
     }
     
@@ -50,5 +57,31 @@ extension ViewController: ImageScannerControllerDelegate {
         assertionFailure("Error occurred: \(error)")
     }
     
+}
+
+extension ViewController: VNDocumentCameraViewControllerDelegate {
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        var selectedImage: UIImage?
+        // Process the scanned pages
+            for pageNumber in 0..<scan.pageCount {
+                let image = scan.imageOfPage(at: pageNumber)
+                selectedImage = image
+            }
+
+            // You are responsible for dismissing the controller.
+        controller.dismiss(animated: true) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ViewImageVC") as! ViewImageVC
+            vc.image = selectedImage
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
+    func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+        controller.dismiss(animated: true)
+    }
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: any Error) {
+        controller.dismiss(animated: true)
+    }
 }
