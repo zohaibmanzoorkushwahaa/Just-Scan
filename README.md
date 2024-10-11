@@ -12,8 +12,8 @@ JustScan is a lightweight application that leverages advanced computer vision te
 ## Technologies Used
 
 - Swift
-- Core Image
-- Vision Framework
+- AVFoundation
+- Vision Kit
 - UIKit
 
 ## Getting Started
