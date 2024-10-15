@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBAction func didScanTapped(_ sender: UIButton) {
         let scannerViewController = ImageScannerController(delegate: self)
         scannerViewController.modalPresentationStyle = .fullScreen
-        scannerViewController.navigationBar.tintColor = .label
+        scannerViewController.navigationBar.tintColor = .white
         present(scannerViewController, animated: true)
     }
     
@@ -56,12 +56,12 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         var selectedImage: UIImage?
         // Process the scanned pages
-            for pageNumber in 0..<scan.pageCount {
-                let image = scan.imageOfPage(at: pageNumber)
-                selectedImage = image
-            }
+        for pageNumber in 0..<scan.pageCount {
+            let image = scan.imageOfPage(at: pageNumber)
+            selectedImage = image
+        }
 
-            // You are responsible for dismissing the controller.
+        // You are responsible for dismissing the controller.
         controller.dismiss(animated: true) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ViewImageVC") as! ViewImageVC
