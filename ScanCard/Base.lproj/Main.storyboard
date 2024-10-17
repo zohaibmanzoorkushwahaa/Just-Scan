@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nnv-Pk-8xv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,26 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="zoa-J1-LG0">
-            <objects>
-                <navigationController id="Nnv-Pk-8xv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oPb-U6-zOt">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kSn-9P-cf7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QKF-jX-x6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-578" y="5"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScanCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ScanCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,22 +107,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buk-Xj-X2o">
-                                <rect key="frame" x="30" y="159" width="333" height="180"/>
+                                <rect key="frame" x="30" y="159" width="333" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="gWa-0d-z7c"/>
+                                    <constraint firstAttribute="height" constant="150" id="gWa-0d-z7c"/>
                                 </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92c-oQ-Ti5">
+                                <rect key="frame" x="30" y="379" width="333" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhanced Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-9E-eJa">
+                                <rect key="frame" x="30" y="335" width="185" height="34"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQB-Fi-6ZG">
+                                <rect key="frame" x="30" y="115" width="165.66666666666666" height="34"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrast Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lP-eB-oOp">
+                                <rect key="frame" x="30" y="549" width="174.33333333333334" height="34"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-jc-djb">
+                                <rect key="frame" x="30" y="593" width="333" height="150"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cOX-Wo-epM"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
+                            <constraint firstItem="4lP-eB-oOp" firstAttribute="leading" secondItem="cOX-Wo-epM" secondAttribute="leading" constant="30" id="4hx-rT-7xz"/>
+                            <constraint firstItem="gIo-jc-djb" firstAttribute="top" secondItem="4lP-eB-oOp" secondAttribute="bottom" constant="10" id="59p-D2-XLM"/>
+                            <constraint firstItem="92c-oQ-Ti5" firstAttribute="top" secondItem="buk-Xj-X2o" secondAttribute="bottom" constant="70" id="73v-RZ-rBt"/>
+                            <constraint firstItem="buk-Xj-X2o" firstAttribute="top" secondItem="PQB-Fi-6ZG" secondAttribute="bottom" constant="10" id="E5g-2a-dJZ"/>
                             <constraint firstItem="buk-Xj-X2o" firstAttribute="top" secondItem="cOX-Wo-epM" secondAttribute="top" constant="100" id="EcA-zE-Mih"/>
+                            <constraint firstItem="92c-oQ-Ti5" firstAttribute="height" secondItem="buk-Xj-X2o" secondAttribute="height" id="H2J-uh-s4S"/>
+                            <constraint firstItem="gIo-jc-djb" firstAttribute="height" secondItem="92c-oQ-Ti5" secondAttribute="height" id="Ojm-TX-wUD"/>
+                            <constraint firstItem="cOX-Wo-epM" firstAttribute="trailing" secondItem="92c-oQ-Ti5" secondAttribute="trailing" constant="30" id="WAh-5v-uCX"/>
+                            <constraint firstItem="92c-oQ-Ti5" firstAttribute="leading" secondItem="cOX-Wo-epM" secondAttribute="leading" constant="30" id="Wgh-5A-78r"/>
+                            <constraint firstItem="4lP-eB-oOp" firstAttribute="top" secondItem="92c-oQ-Ti5" secondAttribute="bottom" constant="20" id="e93-6J-9Hz"/>
+                            <constraint firstItem="cOX-Wo-epM" firstAttribute="trailing" secondItem="gIo-jc-djb" secondAttribute="trailing" constant="30" id="fPo-5K-m9w"/>
+                            <constraint firstItem="cf4-9E-eJa" firstAttribute="leading" secondItem="cOX-Wo-epM" secondAttribute="leading" constant="30" id="gFE-W8-mlM"/>
+                            <constraint firstItem="92c-oQ-Ti5" firstAttribute="top" secondItem="cf4-9E-eJa" secondAttribute="bottom" constant="10" id="gmO-tJ-JTq"/>
                             <constraint firstItem="buk-Xj-X2o" firstAttribute="leading" secondItem="cOX-Wo-epM" secondAttribute="leading" constant="30" id="hy3-jb-q3C"/>
                             <constraint firstItem="cOX-Wo-epM" firstAttribute="trailing" secondItem="buk-Xj-X2o" secondAttribute="trailing" constant="30" id="jlk-Lt-QOw"/>
+                            <constraint firstItem="PQB-Fi-6ZG" firstAttribute="leading" secondItem="cOX-Wo-epM" secondAttribute="leading" constant="30" id="pYs-fF-p9q"/>
+                            <constraint firstItem="gIo-jc-djb" firstAttribute="leading" secondItem="cOX-Wo-epM" secondAttribute="leading" constant="30" id="sGP-cE-Jjr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filteredImageView" destination="92c-oQ-Ti5" id="wxy-cb-5vb"/>
                         <outlet property="imgView" destination="buk-Xj-X2o" id="rr5-lq-hXA"/>
+                        <outlet property="imgViewContrast" destination="gIo-jc-djb" id="XpW-p3-z4p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9a-yS-dvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,7 +175,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
