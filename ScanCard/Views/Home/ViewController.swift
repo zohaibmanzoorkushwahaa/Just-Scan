@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         present(scannerViewController, animated: true)
     }
     
+    var viewModel: ViewControllerViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
