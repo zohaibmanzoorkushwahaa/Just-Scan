@@ -12,10 +12,10 @@ import VisionKit
 class ViewController: UIViewController {
 
     @IBAction func didScanTapped(_ sender: UIButton) {
-        let scannerViewController = ImageScannerController(delegate: self)
-        scannerViewController.modalPresentationStyle = .fullScreen
-        scannerViewController.navigationBar.tintColor = .white
-        present(scannerViewController, animated: true)
+//        let scannerViewController = ImageScannerController(delegate: self)
+//        scannerViewController.modalPresentationStyle = .fullScreen
+//        scannerViewController.navigationBar.tintColor = .white
+//        present(scannerViewController, animated: true)
     }
     
     @IBAction func didScanWithAppleVision(_ sender: Any) {

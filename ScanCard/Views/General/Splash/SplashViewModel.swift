@@ -24,6 +24,6 @@ class SplashViewModel {
     //MARK: - Navigation
     
     func removeSplashScreen() {
-        coordinator.navigateFromSplashVC(isLoggedIn: true)
+        coordinator.navigateFromSplashVC(isLoggedIn: false)
     }
 }
