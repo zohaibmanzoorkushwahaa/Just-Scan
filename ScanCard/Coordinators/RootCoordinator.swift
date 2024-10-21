@@ -31,10 +31,10 @@ extension RootCoordinator {
     func navigateFromSplashVC(isLoggedIn: Bool) {
         if isLoggedIn {
             navigateToApp()
+        }else {
+            navigateToLogister()
         }
     }
-    
-    
     
     func navigateToApp() {
         let viewModel = ViewControllerViewModel(coordinator: self)
@@ -44,6 +44,9 @@ extension RootCoordinator {
     }
     
     func navigateToLogister() {
-        
+        let logisterCoordinator = LogisterCoordinator(navigationController: navigationController)
+        logisterCoordinator.parent = self
+        addChildCoordinator(logisterCoordinator)
+        logisterCoordinator.start(animated: true)
     }
 }
